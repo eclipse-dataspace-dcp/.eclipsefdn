@@ -1,4 +1,4 @@
-local orgs = import 'otterdog-defaults.libsonnet';
+local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-dataspace-dcp') {
   settings+: {
