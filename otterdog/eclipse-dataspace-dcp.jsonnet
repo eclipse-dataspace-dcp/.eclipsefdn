@@ -12,7 +12,7 @@ orgs.newOrg('eclipse-dataspace-dcp') {
   },
 _repositories+:: [
   orgs.newRepo('decentralized-claims-protocol') {
-    allow_rebase_merge: false,
+    allow_rebase_merge: true,
     allow_update_branch: false,
     delete_branch_on_merge: false,
     description: "Specification for the Decentralized Claims Protocol (DCP)",
