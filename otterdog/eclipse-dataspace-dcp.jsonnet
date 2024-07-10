@@ -16,6 +16,7 @@ _repositories+:: [
     allow_update_branch: false,
     delete_branch_on_merge: false,
     description: "Specification for the Decentralized Claims Protocol (DCP)",
+    gh_pages_build_type: "workflow",
     has_discussions: true,
     has_wiki: false,
     squash_merge_commit_title: "PR_TITLE",
