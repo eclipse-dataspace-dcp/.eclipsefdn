@@ -10,20 +10,25 @@ orgs.newOrg('eclipse-dataspace-dcp') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
-_repositories+:: [
-  orgs.newRepo('decentralized-claims-protocol') {
-    allow_rebase_merge: true,
-    allow_update_branch: false,
-    delete_branch_on_merge: false,
-    description: "Specification for the Decentralized Claims Protocol (DCP)",
-    gh_pages_build_type: "workflow",
-    has_discussions: true,
-    has_wiki: false,
-    squash_merge_commit_title: "PR_TITLE",
-    web_commit_signoff_required: false,
-    workflows+: {
-      default_workflow_permissions: "write",
+  _repositories+:: [
+    orgs.newRepo('decentralized-claims-protocol') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
+      has_discussions: true,
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
     },
-  },
-  ]
+  ],
 }
