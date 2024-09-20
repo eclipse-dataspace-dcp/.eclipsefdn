@@ -21,10 +21,13 @@ orgs.newOrg('eclipse-dataspace-dcp') {
       has_discussions: true,
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
+      workflows+: {
+              default_workflow_permissions: "write",
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
-            "gh-pages"
+            "main"
           ],
           deployment_branch_policy: "selected",
         },
