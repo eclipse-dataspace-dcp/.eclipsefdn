@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-dataspace-dcp') {
+orgs.newOrg('technology.dataspace-dcp', 'eclipse-dataspace-dcp') {
   settings+: {
     description: "",
     name: "Decentralized Claims Protocol ",
